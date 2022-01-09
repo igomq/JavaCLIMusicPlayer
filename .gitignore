@@ -23,4 +23,6 @@
 hs_err_pid*
 
 .idea/
-.src/main/java/META-INF
+.target/
+.src/main/java/META-INF/
+.src/main/resources/TestMusic.mp3
