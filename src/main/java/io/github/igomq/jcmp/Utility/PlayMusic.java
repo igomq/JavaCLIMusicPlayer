@@ -6,6 +6,8 @@ import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.io.File;
 
+import static io.github.igomq.jcmp.Utility.GetCurrentDirectory.getCurrentDirectory;
+import static io.github.igomq.jcmp.Utility.MP3toWAV.mp3toWav;
 import static io.github.igomq.jcmp.Utility.MusicData.*;
 
 public class PlayMusic {
@@ -13,6 +15,19 @@ public class PlayMusic {
         System.out.println("Running");
         try {
             File path = new File(musicLocation);
+            String loc = path.toPath().toAbsolutePath().toString();
+            System.out.println("File Path: "+ path.toPath().toAbsolutePath());
+
+            if (loc.endsWith(".mp3")) {
+                // TODO Add MP3 Support
+                System.out.println("Only WAV Supported!");
+                return;
+//                System.out.println("mp3 file detected. Changing to wav");
+//                mp3toWav(path, loc.replace(getCurrentDirectory(), ""));
+//D
+//                path = new File(loc.replace(".mp3", "_converted.wav"));
+            }
+
 
             if (path.exists()) {
                 AudioInputStream ais = AudioSystem.getAudioInputStream(path);

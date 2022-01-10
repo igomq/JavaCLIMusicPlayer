@@ -23,6 +23,22 @@
             <artifactId>annotations</artifactId>
             <version>23.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.soundlibs</groupId>
+            <artifactId>mp3spi</artifactId>
+            <version>1.9.5-1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.soundlibs</groupId>
+            <artifactId>jlayer</artifactId>
+            <version>1.0.1-1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -82,4 +98,10 @@
             </resource>
         </resources>
     </build>
+    <repositories>
+        <repository>
+            <id>Google Repository</id>
+            <url>https://maven.google.com</url>
+        </repository>
+    </repositories>
 </project>

@@ -2,7 +2,8 @@ package io.github.igomq.jcmp;
 
 import java.io.IOException;
 
-import static io.github.igomq.jcmp.Utility.GetFromProperties.getItem;
+import static io.github.igomq.jcmp.Utility.GetCurrentDirectory.getCurrentDirectory;
+import static io.github.igomq.jcmp.Utility.GetProperties.getItem;
 import static io.github.igomq.jcmp.Utility.ASCIIArt.*;
 import static io.github.igomq.jcmp.Utility.PlayMusic.*;
 
@@ -14,6 +15,6 @@ public class MusicPlayer {
                   "\nRepository : https://github.com/igomq/JavaCLIMusicPlayer" +
                   "\n\nVersion " + getItem("version"));
 
-          playMusicOneFile("TestMusic.mp3");
+          playMusicOneFile(getCurrentDirectory() + "\\TestMusic.wav");
      }
 }
