@@ -1,2 +1,1 @@
-# JavaCLIMusicPlayer
-Music player for CLI made in Java 
+# 개발중단
